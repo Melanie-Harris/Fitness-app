@@ -68,6 +68,21 @@ background-color: black;
   width: 100%;
   height: 100%; */
 }
+/* *******Branding */
+.border-radius{
+  border-radius: 10%;
+}
+.person {
+  border: 10px solid transparent;
+  margin-bottom: 25px;
+  width: 80%;
+  height: 80%;
+  /* opacity: 0.7; */
+}
+
+.person:hover {
+  border-color: #f1f1f1;
+}
 
 /* *** Pricing cards */
 .padding{
@@ -88,18 +103,15 @@ background-color: black;
  .pricing-padding{
      padding-bottom: 60px;
  }
-
-.person {
-  border: 10px solid transparent;
-  margin-bottom: 25px;
-  width: 80%;
-  height: 80%;
-  opacity: 0.7;
+/* ******Footer */
+.footer-margin{
+  margin-top: 30px !important;
+}
+.i-padding i{
+  padding-right: 10px !important;
+  
 }
 
-.person:hover {
-  border-color: #f1f1f1;
-}
 
 @media (max-width: 600px) {
   .carousel-caption {
@@ -154,8 +166,9 @@ background-color: black;
 .btn:hover,
 .btn:focus {
   border: 1px solid #333;
-  background-color: #fff;
-  color: #000;
+  /* background-color: #fff;
+  color: #000; */
+  color:white !important;
 }
 
 .modal-header,
