@@ -1,0 +1,43 @@
+/** ========================================= */
+/** Medias */
+/** ======================================== */
+
+@media (max-width: 414px){
+  .carousel-caption h1{
+    color: #fff;
+    /* margin-top: -500px;  */
+    align-content: center;
+    position: relative;
+  }
+  .hero-text {
+    /* font-size: 8px !important; */
+    display: none;
+  }
+  .position{
+    top:170px;
+  }
+  .mobile-display{
+  display: none;
+}
+}
+@media (max-width: 375px){
+  .position{
+    top:145px;
+  }
+}
+@media (max-width: 320px){
+  .position{
+    top:115px;
+  }
+  .btn-height {
+  height: 40px;
+  width: 100px;
+ right:200px;
+ display: none;
+  }
+  .btn-height li {
+  font-size: 10px;
+  }
+}
+
+

@@ -5,9 +5,15 @@
     <title>Marketing page</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS Style Sheets -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive.css">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv" crossorigin="anonymous">
+<script defer src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" integrity="sha384-ZbbbT1gw3joYkKRqh0kWyRp32UAvdqkpbLedQJSlnI8iLQcFVxaGyrOgOJiDQTTR" crossorigin="anonymous"></script>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
@@ -22,219 +28,281 @@
 
 <body id="nav" data-spy="scroll" data-target=".navbar" data-offset="50">
     <!-------------------------- NAV -->
-    <nav class="navbar nav-color navbar-fixed-top">
-        <div class="container-fluid">
+    <nav class="navbar nav-color navbar-default navbar-fixed-top">
+        <div id="nav" class="container-fluid">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <button type="button" class="navbar-toggle float-right" data-toggle="collapse" data-target="#myNavbar">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand text-dark nav-text" href="#index.html">Yoga Mind</a>
+                <a class="navbar-brand nav-text" href="#myPage">Yoga Mind </a>
             </div>
-            <div class="collapse navbar-collapse" id="nav">
+            <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#nav">HOME</a></li>
                     <li><a href="#subscription">SUBSCRIPTIONS</a></li>
                     <li><a href="#about">ABOUT</a></li>
-                    <li><a href="#">CART <span class="glyphicon glyphicon-shopping-cart i-style"></span></a></li>
-                    <!-- <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li> -->
+                   <li><a id="cart" href="#">CART</a></li>
+
+                              <!-- Modal -->
+  <div  class="modal z fade" id="cartModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div style="z-index: 99999999999;" class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"></h4>
+        </div>
+        <div class="modal-body">
+          <p style="font-size: 20px; color:black; text-align: center;">Email received. Thanks for signing up!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+                    <!-- <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Merchandise</a></li>
+                            <li><a href="#">Extras</a></li>
+                            <li><a href="#">Media</a></li>
+                        </ul>
+                    </li> -->
+                    <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-
     <!---------------------------------------- SALE BANNER -->
     <!---30 DAYS FREE -->
-    <nav class="navbar margin navbar-fixed-top">
+    <nav class="navbar margin navbar-fixed-top sale">
         <div class="container-fluid">
             <div class="">
                 <a class="navbar-brand nav-text text " href="#index.html"></a>
             </div>
-            <div class="navbar-collapse" id="">
-                <ul class="nav navbar-right">
-                    <button class="btn btn-danger btn-height">
+            <div class="navbar-collapse " id="">
+                <ul class="nav navbar-right mobile-display ">
+                    <button class="btn btn-danger   btn-height">
                         <li><a href="#">Get 30 days free</a></li>
                     </button>
                 </ul>
             </div>
         </div>
     </nav>
-    <!----------------------------------------- HERO -->
 
-    <div id="hero">
+    <!----------------------------------------- HERO -->
+    <section id="hero">
         <script src="https://fast.wistia.com/embed/medias/h5l8ycifd4.jsonp" async></script>
         <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
         <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
+            <!-- carousel-caption -->
+            <section class="position">
+                <h1>Yoga Mind</h1>
+                <p class="hero-text">Access to thousands of yoga and mediation courses just a click away</p>
+                <form>
+                    <div class="input-group">
+                        <div class="input-group-btn">
+                            <button type="button" id="" class="btn btn-dark btn-p">Sign up now</button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+            <!-- End Caption -->
             <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
                 <div class="wistia_embed wistia_async_h5l8ycifd4 videoFoam=true"
                     style="height:100%;position:relative;width:100%">&nbsp;
                 </div>
             </div>
-        </div>
-
-        <div class="carousel-caption">
-            <h1>Yoga Mind</h1>
-            <p class="hero-text">Access to thousands of yoga and mediation courses just a click away</p>
-            <form>
-                <div class="input-group">
-                    <div class="input-group-btn">
-                        <button type="button" class="btn btn-dark btn-p">Sign up now</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-
-    </div>
-    
+    </section>
 
     <!------------------------------------------ MAIN Branding Section- MARKETING -->
-    <div id="about" class="container text-center">
+    <section id="about" class="container text-center">
         <h3>THE BRAND</h3>
+        <!-- <i style="font-size: 40px; padding: 10px ;" class="fas fa-om"></i> -->
         <p><em>For the love of all things yoga</em></p>
         <p style="margin-bottom: 40px;">"It's not about being good at something. It's about being good to yourself."
-           
+
             <br>
             <div class="row">
                 <div class="col-sm-4">
                     <p class="text-center"><strong>Yoga</strong></p><br>
                     <a href="#">
-                        <img src="img/yoga-man.jpg" class="border-radius person" alt="Yoga pose" width="255" height="255">
+                        <img src="img/yoga-man.jpg" class=" e border-radius person" alt="Yoga pose" width="255"
+                            height="255">
                     </a>
                     <div id="" class="">
-                        <p>Ashtanga</p>
-                        <p>Hatha</p>
-                        <p>Kundalini</p>
+                        <p class="brand-text">Ashtanga</p>
+                        <p class="brand-text">Hatha</p>
+                        <p class="brand-text">Kundalini</p>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <p class="text-center"><strong>Meditation</strong></p><br>
                     <a href="#">
-                        <img src="img/meditation-woman.jpg" class="border-radius person" alt="Mediation pose" width="255" height="255">
+                        <img src="img/meditation-woman.jpg" class="e border-radius person" alt="Mediation pose"
+                            width="255" height="255">
                     </a>
                     <div id="" class="">
-                        <p>Focused </p>
-                        <p>Movement </p>
-                        <p>Transcendental </p>
+                        <p class="brand-text">Focused </p>
+                        <p class="brand-text">Movement </p>
+                        <p class="brand-text">Transcendental </p>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <p class="text-center"><strong>Modified</strong></p><br>
                     <a href="#">
-                        <img src="img/specialty.jpg" class="border-radius person" alt="Modified Yoga" width="255" height="255">
+                        <img src="img/specialty.jpg" class="e border-radius person" alt="Modified Yoga" width="255"
+                            height="255">
                     </a>
                     <div id="" class="">
-                        <p>Yin Yoga</p>
-                        <p>Pregnancy Yoga</p>
-                        <p>Yoga for 50+</p>
+                        <p class="brand-text">Yin Yoga</p>
+                        <p class="brand-text">Pregnancy Yoga</p>
+                        <p class="brand-text">Yoga for 50+</p>
                     </div>
                 </div>
             </div>
-    </div>
+    </section>
     <!------------------------------------------ Subscription Form Section- MARKETING 2 -->
     <form class=bg-1>
-        <h3 style="text-align: center; padding-top:40px;">News letter and special offers</h3>
+        <h3 class="news-letter-text" style="text-align: center; padding-top:40px;">News letter and special offers</h3>
         <div class="input-group container">
             <input type="email" class="form-control " size="20" placeholder="Email Address" required>
-             
+
             <div class="input-group-btn">
-               
-                <button type="button" class="btn btn-danger">Sign up for our news letter</button>
+                <button type="button" id="news-letter" class="btn btn-danger">Sign up for our news letter</button>
             </div>
+            <!-- Modal -->
+  <div class="modal fade" id="newsModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"></h4>
+        </div>
+        <div class="modal-body">
+          <p style="font-size: 20px; color:black; text-align: center;">Email received. Thanks for signing up!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
         </div>
     </form>
     </div>
 
     <!------------------------------------------ Pricing Section--->
-    <p id="subscription" class="">
-        <div class="container ">
-
-            <h3 class="text-center ">Pricing</h3>
-            <p class="text-center pricing-padding"> A Healthier You, A Click Away</p>
-
-            <div class="row text-center ">
-                <div class="col-sm-4 ">
-                    <div class="thumbnail padding ">
-                        <span class="glyphicon glyphicon-leaf btn-lg i-size"></span>
-                        <p><strong>Monthly Subscription</strong></p>
-                        <p class="price-size">$35.99</p>
-                        <button class="btn margin-btn btn-p" data-toggle="modal"
-                            data-target="#myModal">Purchase</button>
-                    </div>
+    <div id="subscription" class="container  ">
+        <h3 class="text-center ">Pricing</h3>
+        <p class="text-center pricing-padding"> A Healthier You, A Click Away</p>
+        <div class="row text-center ">
+            <div class="col-sm-4 ">
+                <div class="thumbnail u padding ">
+                    <!-- <i class="fas fa-leaf price-icons"></i> -->
+                    <span class="glyphicon price-icons glyphicon-leaf btn-lg i-size"></span>
+                    <p><strong>Monthly Subscription</strong></p>
+                    <p class="price-size">$35.99</p>
+                    <button class="btn margin-btn btn-p" data-toggle="modal" data-target="#myModal">Purchase</button>
                 </div>
-                <div class="col-sm-4">
-                    <div class="thumbnail padding">
-                        <span class="glyphicon glyphicon-fire btn-lg i-size"></span>
-                        <p><strong>Annual Subscription</strong></p>
-                        <p class="price-size">$400</p>
-                        <button class="btn margin-btn btn-p" data-toggle="modal"
-                            data-target="#myModal">Purchase</button>
-                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="thumbnail u padding">
+                    <!-- <i class="fas price-icons fa-fire"></i> -->
+                    <span class="glyphicon price-icons glyphicon-fire btn-lg i-size"></span>
+                    <p><strong>Annual Subscription</strong></p>
+                    <p class="price-size">$400</p>
+                    <button class="btn margin-btn btn-p" data-toggle="modal" data-target="#myModal">Purchase</button>
                 </div>
-                <div class="col-sm-4">
-                    <div class="thumbnail padding">
-                        <span class="glyphicon glyphicon-eye-open btn-lg i-size"></span>
-                        <p><strong>Pay Per Session</strong></p>
-                        <p class="price-size">$10.99</p>
-                        <button class="btn margin-btn btn-p" data-toggle="modal"
-                            data-target="#myModal">Purchase</button>
-                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="thumbnail u padding">
+                    <span class="glyphicon glyphicon-eye-open price-icons btn-lg i-size"></span>
+                    <p class=""><strong >Pay Per Session</strong></p>
+                    <p class="price-size ">$10.99</p>
+                    <button class="btn margin-btn btn-p" data-toggle="modal" data-target="#myModal">Purchase</button>
                 </div>
             </div>
         </div>
-
+    </div>
 
     <!------------------------------------------- Footer ---------------->
-        
-        <footer class="text-center">
-            <a class="up-arrow" href="#nav" data-toggle="tooltip" title="TO TOP">
-                <span class="glyphicon glyphicon-chevron-up"></span>
-            </a><br><br>
-            <p><strong>Yoga Mind</strong> </p>
-            <span>Designed by <a style="color:pink" href="www.melanieharris.dev"> Melanie Harris</a></span>
-            <div class="footer-margin">
-            <a href="#" ><p><strong>Contact Us</strong></p> </a>
+    <footer class="text-center">
+        <a class="up-arrow" href="#nav" data-toggle="tooltip" title="TO TOP">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a><br><br>
+        <p><strong>Yoga Mind</strong> </p>
+        <span style="font-size: 20px;">Designed by <a style="color:pink" href="https://www.melanieharris.dev/"> MelanieHarris.dev</a></span>
+        <div class="footer-margin">
+            <a href="#">
+                <p><strong>Contact Us</strong></p>
+            </a>
             <div class="i-padding">
-            <i class="fa fa-instagram" style="font-size:30px"></i>
-            <i class="fa fa-facebook-square" style="font-size:30px"></i>
-            <i class="fa fa-twitter" style="font-size:30px"></i>
-           </div>
+                <i class="fab fa-instagram" style="font-size:30px"></i>
+                <i class="fab fa-facebook-square" style="font-size:30px"></i>
+                <i class="fab fa-twitter-square" style="font-size:30px"></i>
+            </div>
         </div>
-        </footer>
-    
+    </footer>
+
     <!--------------------------------------------arrow up   -->
     <!-- arrow up animation -->
-        <script>
-            $(document).ready(function () {
-                // Initialize Tooltip
-                $('[data-toggle="tooltip"]').tooltip();
+    <script>
+        $(document).ready(function () {
+            // Initialize Tooltip
+            $('[data-toggle="tooltip"]').tooltip();
 
-                // Add smooth scrolling to all links in navbar + footer link
-                $(".navbar a, footer a[href='#nav']").on('click', function (event) {
+            // Add smooth scrolling to all links in navbar + footer link
+            $(".navbar a, footer a[href='#nav']").on('click', function (event) {
 
-                    // Make sure this.hash has a value before overriding default behavior
-                    if (this.hash !== "") {
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
 
-                        // Prevent default anchor click behavior
-                        event.preventDefault();
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
 
-                        // Store hash
-                        var hash = this.hash;
+                    // Store hash
+                    var hash = this.hash;
 
-                        // Using jQuery's animate() method to add smooth page scroll
-                        // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-                        $('html, body').animate({
-                            scrollTop: $(hash).offset().top
-                        }, 900, function () {
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 900, function () {
 
-                            // Add hash (#) to URL when done scrolling (default click behavior)
-                            window.location.hash = hash;
-                        });
-                    } // End if
-                });
-            })
-        </script>
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        })
+
+    // Modal for news subscription
+    $(document).ready(function(){
+    $("#news-letter").click(function(){
+    $("#newsModal").modal();
+  });
+});
+
+// Temporary Modal for Cart
+// $(document).ready(function(){
+//     $("#cart").click(function(){
+//     $("#cartModal").modal();
+//   });
+// });
+
+
+    </script>
 
 </body>
 
